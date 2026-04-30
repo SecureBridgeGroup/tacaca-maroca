@@ -209,7 +209,7 @@ export const menuData: MenuItem[] = [
     name: 'Coca-cola',
     description: 'Garrafa 2L',
     price: 6.00,
-    image_url: '/img/cocacolanormal.png',
+    image_url: '/img/cocalitro.png',
     category: 'Bebidas',
     featured: false,
     available: true,
