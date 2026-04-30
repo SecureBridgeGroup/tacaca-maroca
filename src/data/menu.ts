@@ -110,10 +110,21 @@ export const menuData: MenuItem[] = [
     name: 'Bolo de Chocolate',
     description: 'Bolo fofinho de chocolate com cobertura cremosa. Um doce clássico da casa.',
     price: 14.00,
-    image_url: '/img/10.png',
+    image_url: '/img/bolochocolate.png',
     category: 'Doces',
     featured: false,
     available: true,
     tags: ['sobremesa']
+  },
+  {
+    id: 'a1000000-0000-0000-0000-000000000007-manicoba',
+    name: 'Maniçoba',
+    description: 'Maniçoba tradicional. Um prato típico da região paraense.',
+    price: 22.00,
+    image_url: '/img/9.png',
+    category: 'Maniçoba',
+    featured: false,
+    available: true,
+    tags: ['regional', 'tradicional']
   }
 ];
