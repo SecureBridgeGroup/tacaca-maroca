@@ -44,7 +44,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Hours */}
+          {/* Horário de Funcionamento - COMENTADO PARA NÃO APARECER */}
+          {/* 
           <div>
             <h3 className="text-white font-semibold mb-4">Horário de Funcionamento</h3>
             <div className="space-y-2 text-sm">
@@ -61,7 +62,8 @@ export default function Footer() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> 
+          */}
 
           {/* Contact */}
           <div>
