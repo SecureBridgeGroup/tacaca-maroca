@@ -224,6 +224,6 @@ export const menuData: MenuItem[] = [
     category: 'Bebidas',
     featured: false,
     available: true,
-    tags: ['natural']
+    tags: ['natural, regional']
   }
 ];
