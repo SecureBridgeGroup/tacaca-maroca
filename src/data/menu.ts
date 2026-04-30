@@ -128,11 +128,66 @@ export const menuData: MenuItem[] = [
     tags: ['regional', 'tradicional']
   },
   {
-    id: 'a1000000-0000-0000-0000-000000000005-refri',
-    name: 'Refrigerante',
-    description: 'Refrigerante de diversos sabores, coca-cola, fanta, pepsi, guaraná, baré.',
-    price: 0, // Voltamos para número
-    image_url: '/img/refrigerante.png',
+    id: 'a1000000-0000-0000-0000-000000000005-refricoca',
+    name: 'Coca-cola',
+    description: 'Lata 350 ml',
+    price: 6.00,
+    image_url: '/img/cocacolanormal.png',
+    category: 'Bebidas',
+    featured: false,
+    available: true,
+    tags: ['Refrigerante']
+  },
+  {
+    id: 'a1000000-0000-0000-0000-000000000005-refrifantalaranja',
+    name: 'Fanta Laranja',
+    description: 'Lata 350 ml',
+    price: 6.00,
+    image_url: '/img/fantalaranja.png',
+    category: 'Bebidas',
+    featured: false,
+    available: true,
+    tags: ['Refrigerante']
+  },
+  {
+    id: 'a1000000-0000-0000-0000-000000000005-refrifantauva',
+    name: 'Fanta Uva',
+    description: 'Lata 350 ml',
+    price: 6.00,
+    image_url: '/img/fantauva.png',
+    category: 'Bebidas',
+    featured: false,
+    available: true,
+    tags: ['Refrigerante']
+  },
+  {
+    id: 'a1000000-0000-0000-0000-000000000005-refripepsi',
+    name: 'Pepsi',
+    description: 'Lata 350 ml',
+    price: 6.00,
+    image_url: '/img/pepsi.png',
+    category: 'Bebidas',
+    featured: false,
+    available: true,
+    tags: ['Refrigerante']
+  },
+  {
+    id: 'a1000000-0000-0000-0000-000000000005-refribare',
+    name: 'Baré',
+    description: 'Lata 350 ml',
+    price: 6.00,
+    image_url: '/img/bare.png',
+    category: 'Bebidas',
+    featured: false,
+    available: true,
+    tags: ['Refrigerante']
+  },
+  {
+    id: 'a1000000-0000-0000-0000-000000000005-refricocazero',
+    name: 'Coca-cola Zero',
+    description: 'Lata 350 ml',
+    price: 6.00,
+    image_url: '/img/cocacolazero.png',
     category: 'Bebidas',
     featured: false,
     available: true,
