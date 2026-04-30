@@ -1,4 +1,4 @@
-import { MapPin, Clock, Award } from 'lucide-react';
+import { MapPin, Clock, Award, Bike } from 'lucide-react';
 
 export default function About() {
   return (
@@ -57,6 +57,19 @@ export default function About() {
                   <div className="text-stone-500 text-sm">Da região amazônica</div>
                 </div>
               </div>
+
+              {/* NOVA IDEIA: Entrega Rápida no lugar do Horário */}
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Bike className="w-5 h-5 text-amber-400" />
+                </div>
+                <div>
+                  <div className="text-white font-bold">Delivery em Manaus</div>
+                  <div className="text-stone-500 text-sm">Peça pelo WhatsApp</div>
+                </div>
+              </div>
+
+              {/* Horário de Funcionamento - COMENTADO 
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Clock className="w-5 h-5 text-amber-400" />
@@ -66,6 +79,7 @@ export default function About() {
                   <div className="text-stone-500 text-sm">19h às 00h</div>
                 </div>
               </div>
+              */}
             </div>
           </div>
         </div>
