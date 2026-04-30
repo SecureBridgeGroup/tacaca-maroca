@@ -39,7 +39,7 @@ export default function Header({ cartItems, onCartClick }: HeaderProps) {
           <a href="#" className="flex items-center gap-3 group">
             <div className="w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-110">
               <img
-                src="/img/cama.png"
+                src="img/cama.png"
                 alt="Tacacá da Maroca"
                 className="w-full h-full object-contain"
               />
