@@ -1,4 +1,4 @@
-import { MapPin, Clock, Phone, Leaf, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Clock, Phone, Instagram, Facebook } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -8,12 +8,20 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 bg-amber-500 rounded-full flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-stone-900" />
+              <div className="w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-110">
+                <img
+                  src="/img/cama.png"
+                  alt="Tacacá da Maroca"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
-                <span className="text-white font-bold text-lg leading-none block">Sabores</span>
-                <span className="text-amber-400 text-xs font-medium tracking-widest uppercase leading-none">da Amazônia</span>
+                <span className="text-[#d69147] font-bold text-lg leading-none block font-oswald">
+                  TACACÁ DA
+                </span>
+                <span className="text-white text-xs font-medium tracking-[0.2em] uppercase leading-none block mt-1">
+                  <span className="font-rye text-[14px]">Maroca</span>
+                </span>
               </div>
             </div>
             <p className="text-stone-400 leading-relaxed max-w-sm mb-6">
@@ -41,9 +49,9 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Horário de Funcionamento</h3>
             <div className="space-y-2 text-sm">
               {[
-                { day: 'Seg — Sex', hours: '11h às 22h' },
-                { day: 'Sábado', hours: '10h às 23h' },
-                { day: 'Domingo', hours: '10h às 21h' },
+                { day: 'Sexta', hours: '19h às 00h' },
+                { day: 'Sábado', hours: '19h às 00h' },
+                { day: 'Domingo', hours: '19h às 23h' },
               ].map(({ day, hours }) => (
                 <div key={day} className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-amber-400 flex-shrink-0" />
@@ -62,17 +70,30 @@ export default function Footer() {
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
                 <span className="text-stone-400">
-                  Av. Nazaré, 123<br />
-                  Belém — PA, 66035-170
+                  Rua Osvaldo Monteiro, 214<br />
+                  Manaus — AM, 69095-262
                 </span>
               </div>
+
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-amber-400 flex-shrink-0" />
                 <a
-                  href="tel:+5591999999999"
+                  href="tel:+5592995242735"
                   className="text-stone-400 hover:text-amber-400 transition-colors"
                 >
-                  (91) 99999-9999
+                  (92) 99524-2735
+                </a>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Instagram className="w-4 h-4 text-amber-400 flex-shrink-0" />
+                <a
+                  href="https://www.instagram.com/tacacadatiamaroca"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-stone-400 hover:text-amber-400 transition-colors"
+                >
+                  @tacacadatiamaroca
                 </a>
               </div>
             </div>
@@ -81,7 +102,7 @@ export default function Footer() {
 
         <div className="border-t border-stone-800 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-stone-600 text-sm">
-            &copy; {new Date().getFullYear()} Sabores da Amazônia. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Tacaca da Maroca. Todos os direitos reservados.
           </p>
           <p className="text-stone-700 text-xs">Feito com amor e tucupi</p>
         </div>

@@ -1,7 +1,12 @@
-import { useEffect, useState } from 'react';
 import { Star } from 'lucide-react';
-import { supabase, MenuItem, CartItem } from '../lib/supabase';
+import { menuData, MenuItem } from '../data/menu'; // Importa do novo arquivo
 import MenuCard from './MenuCard';
+
+// Remova o import do CartItem se ele estiver no arquivo do supabase, 
+// você pode definir a interface aqui ou em um arquivo de tipos separado.
+interface CartItem extends MenuItem {
+  quantity: number;
+}
 
 interface FeaturedProps {
   cartItems: CartItem[];
@@ -10,18 +15,8 @@ interface FeaturedProps {
 }
 
 export default function Featured({ cartItems, onAdd, onRemove }: FeaturedProps) {
-  const [featured, setFeatured] = useState<MenuItem[]>([]);
-
-  useEffect(() => {
-    supabase
-      .from('menu_items')
-      .select('*')
-      .eq('featured', true)
-      .eq('available', true)
-      .then(({ data }) => {
-        if (data) setFeatured(data);
-      });
-  }, []);
+  // Filtra direto do arquivo local
+  const featured = menuData.filter(item => item.featured && item.available);
 
   if (featured.length === 0) return null;
 
@@ -34,7 +29,7 @@ export default function Featured({ cartItems, onAdd, onRemove }: FeaturedProps) 
             Destaques da Casa
             <Star className="w-4 h-4 fill-amber-400" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-oswald text-[#d69147]">
             Os favoritos do público
           </h2>
           <p className="text-stone-400 max-w-xl mx-auto">

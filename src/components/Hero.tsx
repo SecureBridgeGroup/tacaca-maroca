@@ -6,8 +6,8 @@ export default function Hero() {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg"
-          alt="Comida Paraense"
+          src="/img/fundo.png" // Atualizado para a sua nova imagem 16:9
+          alt="Tacacá da Maroca - O autêntico sabor da Amazônia"
           className="w-full h-full object-cover scale-105"
           style={{ filter: 'brightness(0.35)' }}
         />
@@ -19,12 +19,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative text-center px-4 max-w-4xl mx-auto">
-        <div className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-sm font-medium px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
-          <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
-          Aberto agora — Belém do Pará
-        </div>
-
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-tight mb-6">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-tight mb-6 font-oswald uppercase tracking-tight">
           Sabores que a{' '}
           <span className="text-amber-400 relative">
             Amazônia
@@ -33,7 +28,7 @@ export default function Hero() {
           guardou
         </h1>
 
-        <p className="text-stone-300 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-stone-300 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-sans">
           Tacacá fumegante, piracuí artesanal e camarão fresquinho —
           a culinária paraense e amazonense do jeito que a vovó fazia.
         </p>

@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
-import { CartItem, MenuItem } from './lib/supabase';
+// Mudamos o import para o seu novo arquivo de dados locais
+import { CartItem, MenuItem } from './data/menu'; 
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Featured from './components/Featured';
@@ -7,6 +8,7 @@ import MenuSection from './components/MenuSection';
 import About from './components/About';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 
 export default function App() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -38,11 +40,19 @@ export default function App() {
   return (
     <div className="min-h-screen bg-stone-900">
       <Header cartItems={cartItems} onCartClick={() => setCartOpen(true)} />
-      <Hero />
-      <Featured cartItems={cartItems} onAdd={addToCart} onRemove={removeFromCart} />
-      <MenuSection cartItems={cartItems} onAdd={addToCart} onRemove={removeFromCart} />
-      <About />
+      
+      {/* Botão flutuante do WhatsApp */}
+      <WhatsAppButton />
+
+      <main>
+        <Hero />
+        <Featured cartItems={cartItems} onAdd={addToCart} onRemove={removeFromCart} />
+        <MenuSection cartItems={cartItems} onAdd={addToCart} onRemove={removeFromCart} />
+        <About />
+      </main>
+
       <Footer />
+
       <Cart
         isOpen={cartOpen}
         onClose={() => setCartOpen(false)}

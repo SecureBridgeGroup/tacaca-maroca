@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Soup, Fish, Waves, UtensilsCrossed, GlassWater, Search } from 'lucide-react';
-import { supabase, Category, MenuItem, CartItem } from '../lib/supabase';
+import { MenuItem, CartItem, menuData } from '../data/menu';
 import MenuCard from './MenuCard';
 
 const categoryIcons: Record<string, React.ElementType> = {
-  bowl: Soup,
-  fish: Fish,
-  shrimp: Waves,
-  plate: UtensilsCrossed,
-  glass: GlassWater,
+  'Tacacá': Soup,
+  'Piracuí': Fish,
+  'Camarão': Waves,
+  'Pratos Típicos': UtensilsCrossed,
+  'Bebidas': GlassWater,
 };
 
 interface MenuSectionProps {
@@ -18,32 +18,20 @@ interface MenuSectionProps {
 }
 
 export default function MenuSection({ cartItems, onAdd, onRemove }: MenuSectionProps) {
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [items, setItems] = useState<MenuItem[]>([]);
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [search, setSearch] = useState('');
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    async function fetchData() {
-      const [catResult, itemResult] = await Promise.all([
-        supabase.from('categories').select('*').order('order'),
-        supabase.from('menu_items').select('*').eq('available', true),
-      ]);
-      if (catResult.data) setCategories(catResult.data);
-      if (itemResult.data) setItems(itemResult.data);
-      setLoading(false);
-    }
-    fetchData();
-  }, []);
+  // 1. Extraímos as categorias únicas existentes nos seus dados locais
+  const categories = Array.from(new Set(menuData.map(item => item.category)));
 
-  const filtered = items.filter((item) => {
-    const matchCategory = activeCategory === 'all' || item.category_id === activeCategory;
+  // 2. Filtramos os itens baseados na categoria ativa e na busca
+  const filtered = menuData.filter((item) => {
+    const matchCategory = activeCategory === 'all' || item.category === activeCategory;
     const matchSearch =
       search.trim() === '' ||
       item.name.toLowerCase().includes(search.toLowerCase()) ||
       item.description.toLowerCase().includes(search.toLowerCase());
-    return matchCategory && matchSearch;
+    return matchCategory && matchSearch && item.available;
   });
 
   return (
@@ -52,7 +40,7 @@ export default function MenuSection({ cartItems, onAdd, onRemove }: MenuSectionP
         {/* Header */}
         <div className="text-center mb-12">
           <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase">Cardápio</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-4 font-oswald text-[#d69147]">
             Escolha o seu prato
           </h2>
           <p className="text-stone-400 max-w-xl mx-auto">
@@ -84,44 +72,27 @@ export default function MenuSection({ cartItems, onAdd, onRemove }: MenuSectionP
           >
             Todos
           </button>
-          {categories.map((cat) => {
-            const Icon = categoryIcons[cat.icon] ?? UtensilsCrossed;
+          {categories.map((catName) => {
+            const Icon = categoryIcons[catName] ?? UtensilsCrossed;
             return (
               <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
+                key={catName}
+                onClick={() => setActiveCategory(catName)}
                 className={`flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                  activeCategory === cat.id
+                  activeCategory === catName
                     ? 'bg-amber-500 text-stone-900'
                     : 'bg-stone-800 text-stone-300 hover:bg-stone-700 border border-stone-700'
                 }`}
               >
                 <Icon className="w-4 h-4" />
-                {cat.name}
+                {catName}
               </button>
             );
           })}
         </div>
 
         {/* Grid */}
-        {loading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <div key={i} className="bg-stone-800 rounded-2xl overflow-hidden animate-pulse">
-                <div className="h-48 bg-stone-700" />
-                <div className="p-4 space-y-3">
-                  <div className="h-4 bg-stone-700 rounded w-3/4" />
-                  <div className="h-3 bg-stone-700 rounded w-full" />
-                  <div className="h-3 bg-stone-700 rounded w-5/6" />
-                  <div className="flex justify-between items-center pt-1">
-                    <div className="h-5 bg-stone-700 rounded w-16" />
-                    <div className="h-8 bg-stone-700 rounded-full w-24" />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : filtered.length === 0 ? (
+        {filtered.length === 0 ? (
           <div className="text-center py-20">
             <p className="text-stone-500 text-lg">Nenhum prato encontrado.</p>
           </div>

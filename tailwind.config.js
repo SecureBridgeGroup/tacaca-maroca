@@ -2,7 +2,13 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        // Adicione esta linha:
+        rye: ['Rye', 'cursive'],
+        oswald: ['Oswald', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };

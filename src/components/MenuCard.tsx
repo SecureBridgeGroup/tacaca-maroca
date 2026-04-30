@@ -1,5 +1,6 @@
 import { Plus } from 'lucide-react';
-import { MenuItem, CartItem } from '../lib/supabase';
+// Atualizado para importar do seu novo arquivo local
+import { MenuItem, CartItem } from '../data/menu';
 
 interface MenuCardProps {
   item: MenuItem;
@@ -44,7 +45,7 @@ export default function MenuCard({ item, cartItems, onAdd, onRemove }: MenuCardP
           </div>
         )}
         {/* Tags */}
-        {item.tags.length > 0 && (
+        {item.tags && item.tags.length > 0 && (
           <div className="absolute bottom-3 left-3 flex flex-wrap gap-1">
             {item.tags.slice(0, 2).map((tag) => (
               <span

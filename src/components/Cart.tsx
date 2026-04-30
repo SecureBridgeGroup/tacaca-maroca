@@ -1,5 +1,5 @@
 import { X, ShoppingBag, Trash2, Plus, Minus, Phone } from 'lucide-react';
-import { CartItem, MenuItem } from '../lib/supabase';
+import { MenuItem, CartItem } from '../data/menu';
 
 interface CartProps {
   isOpen: boolean;
@@ -28,7 +28,7 @@ export default function Cart({ isOpen, onClose, cartItems, onAdd, onRemove, onCl
   };
 
   const handleWhatsApp = () => {
-    window.open(`https://wa.me/5591999999999?text=${buildWhatsAppMessage()}`, '_blank');
+    window.open(`https://wa.me/5592995242735?text=${buildWhatsAppMessage()}`, '_blank');
   };
 
   return (

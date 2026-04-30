@@ -17,8 +17,8 @@ export default function About() {
             </div>
             {/* Floating badge */}
             <div className="absolute -bottom-6 -right-6 hidden lg:flex bg-amber-500 text-stone-900 rounded-2xl p-5 shadow-2xl flex-col items-center">
-              <span className="text-4xl font-black leading-none">15+</span>
-              <span className="text-sm font-semibold mt-1">anos de tradição</span>
+              <span className="text-4xl font-black leading-none">100%</span>
+              <span className="text-sm font-semibold mt-1">Sabor Regional</span>
             </div>
           </div>
 
@@ -29,7 +29,7 @@ export default function About() {
               Da floresta<br />para a sua mesa
             </h2>
             <p className="text-stone-400 leading-relaxed mb-4">
-              Fundada por uma família de Belém do Pará, nossa missão é trazer a autenticidade da culinária amazônica
+              Fundada por uma família de Juruti do Pará, nossa missão é trazer a autenticidade da culinária amazônica
               para cada prato servido. Usamos ingredientes frescos e seguimos receitas passadas de geração em geração.
             </p>
             <p className="text-stone-400 leading-relaxed mb-8">
@@ -45,7 +45,7 @@ export default function About() {
                 </div>
                 <div>
                   <div className="text-white font-bold">Receitas Originais</div>
-                  <div className="text-stone-500 text-sm">Direto de Belém</div>
+                  <div className="text-stone-500 text-sm">Direto do Pará</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -62,8 +62,8 @@ export default function About() {
                   <Clock className="w-5 h-5 text-amber-400" />
                 </div>
                 <div>
-                  <div className="text-white font-bold">Aberto diariamente</div>
-                  <div className="text-stone-500 text-sm">11h às 22h</div>
+                  <div className="text-white font-bold">Aberto às Sextas, Sábados e Domingos</div>
+                  <div className="text-stone-500 text-sm">19h às 00h</div>
                 </div>
               </div>
             </div>
