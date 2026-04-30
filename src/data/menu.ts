@@ -191,6 +191,28 @@ export const menuData: MenuItem[] = [
     category: 'Bebidas',
     featured: false,
     available: true,
+    tags: ['Refrigerante, Zero Açúcar']
+  },
+  {
+    id: 'a1000000-0000-0000-0000-000000000005-refribarelitro',
+    name: 'Baré',
+    description: 'Garrafa 2L',
+    price: 6.00,
+    image_url: '/img/barelitro.png',
+    category: 'Bebidas',
+    featured: false,
+    available: true,
+    tags: ['Refrigerante, Zero Açúcar']
+  },
+  {
+    id: 'a1000000-0000-0000-0000-000000000005-refricocalitro',
+    name: 'Coca-cola',
+    description: 'Garrafa 2L',
+    price: 6.00,
+    image_url: '/img/cocacolanormal.png',
+    category: 'Bebidas',
+    featured: false,
+    available: true,
     tags: ['Refrigerante']
   }
 ];
