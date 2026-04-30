@@ -4,7 +4,7 @@ export interface MenuItem {
   id: string;
   name: string;
   description: string;
-  price: number | string; // CORREÇÃO 1: Permite número OU texto 'Consultar'
+  price: number; // Voltamos para apenas number
   image_url: string;
   category: string;
   featured: boolean;
@@ -75,8 +75,8 @@ export const menuData: MenuItem[] = [
   {
     id: 'a1000000-0000-0000-0000-000000000005',
     name: 'Suco de Maracujá',
-    description: 'Polpa de maracujá fresco batido com água gelada. Refrescante e perfeito para acompanhar seu tacacá.', // CORREÇÃO 2: Removido o "1" digitado errado
-    price: 'Consultar',
+    description: 'Polpa de maracujá fresco batido com água gelada. Refrescante e perfeito para acompanhar seu tacacá.',
+    price: 0, // Voltamos para número
     image_url: '/img/suco1.jpg',
     category: 'Bebidas',
     featured: true,
@@ -87,7 +87,7 @@ export const menuData: MenuItem[] = [
     id: 'a1000000-0000-0000-0000-000000000005-cupuacu',
     name: 'Suco de Cupuaçu',
     description: 'Polpa de cupuaçu fresco batido com água gelada. Refrescante e nutritivo.',
-    price: 'Consultar',
+    price: 0, // Voltamos para número
     image_url: '/img/suco2.jpg',
     category: 'Bebidas',
     featured: false,
@@ -110,7 +110,7 @@ export const menuData: MenuItem[] = [
     name: 'Bolo de Chocolate',
     description: 'Bolo fofinho de chocolate com cobertura cremosa. Um doce clássico da casa.',
     price: 10.00,
-    image_url: '/img/bolochocolate.png', // CORREÇÃO 3: Verifique se este arquivo existe na pasta /img/
+    image_url: '/img/bolochocolate.png',
     category: 'Doces',
     featured: false,
     available: true,
@@ -130,12 +130,12 @@ export const menuData: MenuItem[] = [
   {
     id: 'a1000000-0000-0000-0000-000000000005-refri',
     name: 'Refrigerante',
-    description: 'Refrigerante de diversos sabores (Coca-Cola, Fanta, Pepsi, Guaraná, Baré).', // Ajuste no texto
-    price: 'Consultar',
-    image_url: '/img/refrigerante.png', // CORREÇÃO 4: Verifique se este arquivo existe na pasta /img/
+    description: 'Refrigerante de diversos sabores, coca-cola, fanta, pepsi, guaraná, baré.',
+    price: 0, // Voltamos para número
+    image_url: '/img/refrigerante.png',
     category: 'Bebidas',
     featured: false,
     available: true,
-    tags: ['refrigerante'] // Ajuste na tag para minúsculo
+    tags: ['Refrigerante']
   }
 ];

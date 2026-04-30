@@ -1,4 +1,4 @@
-import { MapPin, Clock, Award, Bike } from 'lucide-react';
+import { MapPin, Award, Bike } from 'lucide-react';
 
 export default function About() {
   return (

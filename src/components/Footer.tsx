@@ -1,4 +1,4 @@
-import { MapPin, Clock, Phone, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Phone, Instagram, Facebook } from 'lucide-react';
 
 export default function Footer() {
   return (
