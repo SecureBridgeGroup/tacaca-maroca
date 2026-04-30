@@ -76,7 +76,7 @@ export const menuData: MenuItem[] = [
     id: 'a1000000-0000-0000-0000-000000000005',
     name: 'Suco de Maracujá',
     description: 'Polpa de maracujá fresco batido com água gelada. Refrescante e perfeito para acompanhar seu tacacá.',
-    price: 0, // Voltamos para número
+    price: 12.00, // Voltamos para número
     image_url: '/img/suco1.jpg',
     category: 'Bebidas',
     featured: true,
@@ -87,7 +87,7 @@ export const menuData: MenuItem[] = [
     id: 'a1000000-0000-0000-0000-000000000005-cupuacu',
     name: 'Suco de Cupuaçu',
     description: 'Polpa de cupuaçu fresco batido com água gelada. Refrescante e nutritivo.',
-    price: 0, // Voltamos para número
+    price: 12.00,
     image_url: '/img/suco2.jpg',
     category: 'Bebidas',
     featured: false,
@@ -197,7 +197,7 @@ export const menuData: MenuItem[] = [
     id: 'a1000000-0000-0000-0000-000000000005-refribarelitro',
     name: 'Baré',
     description: 'Garrafa 2L',
-    price: 6.00,
+    price: 11.00,
     image_url: '/img/barelitro.png',
     category: 'Bebidas',
     featured: false,
@@ -208,11 +208,22 @@ export const menuData: MenuItem[] = [
     id: 'a1000000-0000-0000-0000-000000000005-refricocalitro',
     name: 'Coca-cola',
     description: 'Garrafa 2L',
-    price: 6.00,
+    price: 14.00,
     image_url: '/img/cocalitro.png',
     category: 'Bebidas',
     featured: false,
     available: true,
     tags: ['Refrigerante']
+  },
+  {
+    id: 'a1000000-0000-0000-0000-000000000005-tapereba',
+    name: 'Suco de Taperebá',
+    description: 'Polpa de Taperebá fresco batido com água gelada. Refrescante e nutritivo.',
+    price: 12.00, 
+    image_url: '/img/sucotapereba.jpeg',
+    category: 'Bebidas',
+    featured: false,
+    available: true,
+    tags: ['natural']
   }
 ];
