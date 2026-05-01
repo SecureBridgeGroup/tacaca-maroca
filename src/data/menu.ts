@@ -138,7 +138,7 @@ export const menuData: MenuItem[] = [
     available: true,
     tags: ['Refrigerante']
   },
-  {
+  {/*
     id: 'a1000000-0000-0000-0000-000000000005-refrifantalaranja',
     name: 'Fanta Laranja',
     description: 'Lata 350 ml',
@@ -148,8 +148,8 @@ export const menuData: MenuItem[] = [
     featured: false,
     available: true,
     tags: ['Refrigerante']
-  },
-  {
+  */},
+  {/*
     id: 'a1000000-0000-0000-0000-000000000005-refrifantauva',
     name: 'Fanta Uva',
     description: 'Lata 350 ml',
@@ -159,8 +159,8 @@ export const menuData: MenuItem[] = [
     featured: false,
     available: true,
     tags: ['Refrigerante']
-  },
-  {
+  */},
+  {/*
     id: 'a1000000-0000-0000-0000-000000000005-refripepsi',
     name: 'Pepsi',
     description: 'Lata 350 ml',
@@ -170,7 +170,7 @@ export const menuData: MenuItem[] = [
     featured: false,
     available: true,
     tags: ['Refrigerante']
-  },
+  */},
   {
     id: 'a1000000-0000-0000-0000-000000000005-refribare',
     name: 'Baré',
@@ -182,7 +182,7 @@ export const menuData: MenuItem[] = [
     available: true,
     tags: ['Refrigerante']
   },
-  {
+  {/*
     id: 'a1000000-0000-0000-0000-000000000005-refricocazero',
     name: 'Coca-cola Zero',
     description: 'Lata 350 ml',
@@ -192,7 +192,7 @@ export const menuData: MenuItem[] = [
     featured: false,
     available: true,
     tags: ['Refrigerante, Zero Açúcar']
-  },
+  */},
   {
     id: 'a1000000-0000-0000-0000-000000000005-refribarelitro',
     name: 'Baré',
@@ -219,7 +219,7 @@ export const menuData: MenuItem[] = [
     id: 'a1000000-0000-0000-0000-000000000005-tapereba',
     name: 'Suco de Taperebá',
     description: 'Polpa de Taperebá fresco batido com água gelada. Refrescante e nutritivo.',
-    price: 12.00, 
+    price: 12.00,
     image_url: '/img/sucotapereba.jpg',
     category: 'Bebidas',
     featured: false,
