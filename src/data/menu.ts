@@ -220,7 +220,7 @@ export const menuData: MenuItem[] = [
     name: 'Suco de Taperebá',
     description: 'Polpa de Taperebá fresco batido com água gelada. Refrescante e nutritivo.',
     price: 12.00, 
-    image_url: '/img/sucotapereba.jpeg',
+    image_url: '/img/sucotapereba.jpg',
     category: 'Bebidas',
     featured: false,
     available: true,
