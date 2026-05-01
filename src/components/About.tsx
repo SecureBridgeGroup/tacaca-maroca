@@ -58,14 +58,13 @@ export default function About() {
                 </div>
               </div>
 
-              {/* NOVA IDEIA: Entrega Rápida no lugar do Horário */}
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Bike className="w-5 h-5 text-amber-400" />
+                  <MapPin className="w-5 h-5 text-amber-400" />
                 </div>
                 <div>
-                  <div className="text-white font-bold">Delivery em Manaus</div>
-                  <div className="text-stone-500 text-sm">Peça pelo WhatsApp</div>
+                  <div className="text-white font-bold">Visite nossa Unidade</div>
+                  <div className="text-stone-500 text-sm">O melhor Tacacá de Manaus</div>
                 </div>
               </div>
 
