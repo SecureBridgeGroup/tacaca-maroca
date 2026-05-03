@@ -43,7 +43,7 @@ export const menuData: MenuItem[] = [
     id: 'a1000000-0000-0000-0000-000000000002',
     name: 'Bolinho de Piracuí',
     description: 'Bolinhos crocantes de farinha de peixe com recheio especial. Porção com 6 unidades.',
-    price: 17.00,
+    price: 25.00,
     image_url: '/img/3.jpg',
     category: 'Piracuí',
     featured: true,
@@ -117,12 +117,44 @@ export const menuData: MenuItem[] = [
     tags: ['sobremesa']
   },
   {
+    id: 'a1000000-0000-0000-0000-000000000006-acaicuia',
+    name: 'Açai na Cuia',
+    description: 'Açai fresco com tapioco e leite condensado. Um doce regional muito popular.',
+    price: 10.00,
+    image_url: '/img/acaicuia.png',
+    category: 'Doces',
+    featured: false,
+    available: true,
+    tags: ['sobremesa', 'regional']
+  },
+  {
+    id: 'a1000000-0000-0000-0000-000000000006-acailitro',
+    name: 'Açai na garrafa',
+    description: 'Açai puro em garrafa.',
+    price: 10.00,
+    image_url: '/img/acailitro.png',
+    category: 'Doces',
+    featured: false,
+    available: true,
+    tags: ['sobremesa', 'regional']
+  },
+  {
     id: 'a1000000-0000-0000-0000-000000000007-manicoba',
     name: 'Maniçoba',
     description: 'Maniçoba tradicional. Um prato típico da região paraense.',
     price: 42.00,
     image_url: '/img/9.png',
     category: 'Maniçoba',
+    featured: false,
+    available: true,
+    tags: ['regional', 'tradicional']
+  },{
+    id: 'a1000000-0000-0000-0000-000000000007-patotucupi',
+    name: 'Pato no Tucupi',
+    description: 'Pato cozido no tucupi com arroz. Um prato típico da região paraense.',
+    price: 42.00,
+    image_url: '/img/9.jpg',
+    category: 'Pato no tucupi',
     featured: false,
     available: true,
     tags: ['regional', 'tradicional']
