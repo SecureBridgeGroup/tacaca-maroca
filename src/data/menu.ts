@@ -132,7 +132,7 @@ export const menuData: MenuItem[] = [
     name: 'Açai na garrafa',
     description: 'Açai puro em garrafa.',
     price: 10.00,
-    image_url: '/img/acailitro.png',
+    image_url: '/img/acailitro.jpg',
     category: 'Doces',
     featured: false,
     available: true,
