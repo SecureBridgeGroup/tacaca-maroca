@@ -62,6 +62,17 @@ export const menuData: MenuItem[] = [
     tags: ['premium', 'regional']
   },
   {
+    id: 'a1000000-0000-0000-0000-000000000003-farofacharque',
+    name: 'Farofa de Charque',
+    description: 'Charque fresco',
+    price: 25.00,
+    image_url: '/img/.jpg',
+    category: 'Camarão',
+    featured: true,
+    available: true,
+    tags: ['premium', 'regional']
+  },
+  {
     id: 'a1000000-0000-0000-0000-000000000004',
     name: 'Vatapá Paraense',
     description: 'Vatapá cremoso de camarão seco.',
@@ -130,7 +141,7 @@ export const menuData: MenuItem[] = [
   {
     id: 'a1000000-0000-0000-0000-000000000006-acailitro',
     name: 'Açai na garrafa',
-    description: 'Açai puro em garrafa.',
+    description: 'Açai puro em garrafa de 1L',
     price: 25.00,
     image_url: '/img/acailitro.jpg',
     category: 'Doces',
